@@ -12,8 +12,8 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(require("./router"));
 
-app.listen(appConfig.PORT, () => {
-	logger.info(
-		`Server listening at http://${appConfig.HOSTNAME}:${appConfig.PORT}/`
-	);
+const server = app.listen(appConfig.PORT, appConfig.HOSTNAME, () => {
+	const hostname = server.address().address;
+	const port = server.address().port;
+	logger.info(`Server listening at http://${hostname}:${port}/`);
 });
