@@ -1,0 +1,9 @@
+{
+  "name": "100days-dnd-character-sheets",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ApproachingApathy/100days-dnd-character-sheets.git",
+  "author": "Ephriam Henderson <hendersonephriamn@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
