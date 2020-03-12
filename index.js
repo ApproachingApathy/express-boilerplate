@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const expressLayouts = require("express-ejs-layouts");
 
 // Move the config object to the global scope.
 global.appConfig = require("./configs/config.json");
@@ -8,6 +9,8 @@ global.appConfig = require("./configs/config.json");
 global.logger = require("./helpers/create-logger")();
 
 app.set("view engine", "ejs");
+app.set("layout", "layouts/layout");
+app.use(expressLayouts);
 
 app.use(express.static("public"));
 app.use(require("./router"));

@@ -1,20 +1,34 @@
 const express = require("express");
 const router = express.Router();
 
+const siteConfig = require("../configs/site.json");
+
 router.use((req, res, next) => {
 	logger.debug(`Route: ${req.url}`);
 	next();
 });
 
+router.use((req, res, next) => {
+	res.locals.site = siteConfig;
+	next();
+});
+
 router.get("/", (req, res) => {
-	res.render("index");
+	res.render("index", {
+		page: {
+			title: "Home"
+		}
+	});
 });
 
 // 404 Error
 router.get("*", (req, res) => {
 	res.statusCode = 404;
 	res.render("404", {
-		route: req.url
+		route: req.url,
+		page: {
+			title: "404"
+		}
 	});
 });
 
