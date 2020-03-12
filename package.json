@@ -1,16 +1,23 @@
 {
-  "name": "100days-dnd-character-sheets",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "git@github.com:ApproachingApathy/100days-dnd-character-sheets.git",
-  "author": "Ephriam Henderson <hendersonephriamn@gmail.com>",
-  "license": "MIT",
-  "private": false,
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "ejs": "^3.0.1",
-    "express": "^4.17.1",
-    "mongodb": "^3.5.5",
-    "winston": "^3.2.1"
-  }
+	"name": "100days-dnd-character-sheets",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"start": "node ./index.js",
+		"develop": "nodemon ./index.js"
+	},
+	"repository": "git@github.com:ApproachingApathy/100days-dnd-character-sheets.git",
+	"author": "Ephriam Henderson <hendersonephriamn@gmail.com>",
+	"license": "MIT",
+	"private": false,
+	"dependencies": {
+		"body-parser": "^1.19.0",
+		"ejs": "^3.0.1",
+		"express": "^4.17.1",
+		"mongodb": "^3.5.5",
+		"winston": "^3.2.1"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.2"
+	}
 }
